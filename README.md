@@ -1,6 +1,12 @@
 # JeffreyLiu-Website
 My Personal Website. Built from Scratch! 📑
 
-## Personal Website For Jeffrey!
-## Build from 0 to 100!
-## Website Domain: 
+This is my personal website for Jeffrey Liu.  
+Using JS, HTML and CSS to build the whole website out of scratch.
+
+### Main Section:
+1. About Me: A brief description about myself
+2. Projects & Publications: My featured projects and publications.
+3. Contact Me: Ways to contact me (email/linkedin/github/instagram 📱)
+
+### Website Domain: http://jeffreyliujl.com/

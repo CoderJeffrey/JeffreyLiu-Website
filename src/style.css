@@ -1,5 +1,5 @@
 body {
-    font-family: 'DM Serif Display', serif;
+    font-family: 'Albert Sans', sans-serif;
 }
 
 section{
@@ -54,6 +54,10 @@ h2 {
 
 h3 {
     font-size: 35px;
+    margin: 10px;
+}
+.small-h3{
+    font-size: 28px;
 }
 
 p {
@@ -79,8 +83,8 @@ p {
     background-color: coral;
     text-align: center;
     font-size: 30px;
-    padding-top: 6px;
-    margin-top: 20px;
+    padding-top: 10px;
+    margin-top: 25px;
 }
 
 .button:hover{
@@ -123,8 +127,9 @@ p {
 
 .sub-section{
     display: flex;
-    justify-content: space-around;
-    padding: 50px;
+    justify-content: space-between;
+    padding: 50px 0px;
+    margin-left: 20px;
 }
 
 .sub-section-alternative{
@@ -167,7 +172,7 @@ p {
 
 .project-image{
     margin-top: 25px;
-    width: 250px;
+    height: 200px;
     border-radius: 25px;
 }
 
@@ -190,12 +195,150 @@ a {
 }
 
 .about-me-button{
+    font-size: 25px;
+    font-weight: 400;
     text-decoration: none;
 }
 
 .hamburger{
     display: none;
 }
+
+.subtext-container{
+    text-align: center;
+    height: 130px;
+}
+
+.subtext-container p{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+.ads-container{
+    height: 53px;
+}
+
+.bio{
+    display: flex;
+    flex-direction: column;
+}
+  /* --------------------- */
+.css-typing p {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0; /* Gives that scrolling effect as the typing happens */
+  }
+  
+  .css-typing p:nth-child(1) {
+    width: 7em;
+    animation: 
+      typing1 2s steps(40, end);
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes typing1{
+      0% {
+        width: 0;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        border: none;
+      }
+  }
+
+  .css-typing p:nth-child(2) {
+    font-size: 24px;
+    width: 21em;
+    opacity: 0;
+    animation: 
+      typing2 2s steps(40, end);
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes typing2{
+      0% {
+        width: 0;
+      }
+      1% {
+        opacity: 1;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        opacity: 1;
+        border: none;
+      }
+  }
+
+
+  .css-typing p:nth-child(3) {
+    font-size: 20px;
+    width: 33em;
+    opacity: 0;
+    animation: 
+      typing2 2s steps(40, end);
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes typing2{
+      0% {
+        width: 0;
+      }
+      1% {
+        opacity: 1;
+      }
+      99.9% {
+        border-right: .15em solid orange;
+      }
+      100% {
+        opacity: 1;
+        border: none;
+      }
+  }
+
+  @keyframes blink-caret{
+    from, to {border-color: transparent;}
+    50% {border-color: blue;}
+  } 
+  
+  /* 
+  
+
+  
+  @keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* --------------------- */
 
 @media only screen and (max-width: 1000px){
     .hamburger{
@@ -229,3 +372,4 @@ a {
         display: none;
     }
 }
+
