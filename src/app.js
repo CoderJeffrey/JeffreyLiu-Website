@@ -1,27 +1,52 @@
 const hamburger_button = document.getElementById('hamburger');
 const navList = document.getElementById('nav-list');
 
-const memoryDescription = "A fun simulation of Simon Electronic Memory Game. I use HTML, CSS, JS to build a web game \
-with five different colored buttons. Each button plays a unique note. Players had to be able to repeat an increasingly long \
-string of tones that buttons created";
-
-const sambaDescription = "A fusion model using BERT that improves the accuracy of predicting \
-whether a YouTube video is appropriate for children by at least 7% over other state-of-the-art classifiers.";
-
-const adsDescription = "An extensive study of ad patterns in young-kid-oriented videos to quantify the presence of inappropriate ads that are shown on appropriate videos on YouTube, \
-with a comprehensive dataset of YouTube ads displayed in young-kid-oriented videos.";
-
-// const memoryDescription = "A fun simulation of Simon Electronic Memory Game. I use HTML, CSS, JS to build a web game \
-// with five different colored buttons. Each button plays a unique note. Players had to be able to repeat an increasingly long \
-// string of tones that buttons created";
-
-document.getElementById('memory-description').innerHTML = memoryDescription
-document.getElementById('samba-description').innerHTML = sambaDescription
-document.getElementById('ads-description').innerHTML = adsDescription
-
-
 function toggleButton(){
     navList.classList.toggle('show');
 }
 
 hamburger_button.addEventListener('click', toggleButton);
+
+// -----------------------------------------------------------
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Coding Enthusiast", "Foodie", "Basketball Fan (NBA)"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 1000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+// ----------------------------------------------------------------------------------------
