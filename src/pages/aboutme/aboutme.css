@@ -8,13 +8,6 @@ section{
     background-color: white;
 }
 
-.hero {
-    background-color: #1c1d25;
-    color: white;
-    font-size: 40px; 
-    padding: 50px;
-}
-
 footer{
     background-color: black;
     color: white;
@@ -22,11 +15,6 @@ footer{
     align-items: center;
     padding-bottom: 30px;
     padding: 50px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
 }
 
 ul {
@@ -96,14 +84,6 @@ p {
     color: #808080;
 }
 
-.hero-area{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100%;
-    align-items: center;
-}
-
 .typing-container{
    margin-bottom: 8px;
 }
@@ -119,7 +99,7 @@ p {
 
 .logo{
     height: 90px;
-    margin: 20px;
+    margin: 10px;
 }
 
 .social-png{
@@ -291,43 +271,7 @@ a {
     from, to {border-color: transparent;}
     50% {border-color: blue;}
   } 
-  
-.container {
-    height: 200 px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: aqua;
-  }
-  .container p {
-    font-size: 3rem;
-    padding: 0.5rem;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    text-align: center;
-    overflow: hidden;
-  }
-  .container p span.typed-text {
-    font-weight: normal;
-    color: #dd7732;
-  }
-  .container p span.cursor {
-    display: inline-block;
-    background-color: #ccc;
-    margin-left: 0.1rem;
-    width: 3px;
-    animation: blink 1s infinite;
-  }
-  .container p span.cursor.typing {
-    animation: none;
-  }
-  @keyframes blink {
-    0%  { background-color: #ccc; }
-    49% { background-color: #ccc; }
-    50% { background-color: transparent; }
-    99% { background-color: transparent; }
-    100%  { background-color: #ccc; }
-  }
+
 
 
 @media only screen and (max-width: 1000px){
@@ -361,4 +305,17 @@ a {
     .logo{
         display: none;
     }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  background-color: #1c1d25;
+  color: white;
+  font-size: 40px; 
+  padding: 20px;
+  margin-left: 0px;
 }

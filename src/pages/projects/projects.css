@@ -29,7 +29,7 @@ ul {
 
 li{
     /* width: 200px; */
-    text-decoration:dotted;
+    text-decoration: none;
 }
 
 h1 {
